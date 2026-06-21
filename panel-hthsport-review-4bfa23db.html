@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>华体会 · 轻量导航</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fcfcfc;
+      color: #1e2a3a;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2.4rem 1.6rem 4rem;
+    }
+
+    /* 顶部导航 */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid #eaedf0;
+      margin-bottom: 3.2rem;
+    }
+
+    .nav-logo {
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: 0.3px;
+      color: #1e2a3a;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #4b5b6e;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #1e2a3a;
+    }
+
+    /* hero */
+    .hero {
+      margin-bottom: 3.8rem;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #4b5b6e;
+      max-width: 580px;
+    }
+
+    /* 核心介绍 */
+    .intro-section {
+      margin-bottom: 3.6rem;
+    }
+
+    .intro-section h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+      border-bottom: 2px solid #eef1f4;
+      padding-bottom: 0.5rem;
+    }
+
+    .intro-section p {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    /* 三个场景模块 */
+    .scenes {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      margin-bottom: 3.4rem;
+    }
+
+    .scene-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.6rem 1.8rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+      transition: box-shadow 0.2s;
+    }
+
+    .scene-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .scene-card h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .scene-card p {
+      color: #3d4d5f;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .scene-card .meta {
+      font-size: 0.8rem;
+      color: #7c8a9a;
+      margin-top: 0.6rem;
+    }
+
+    /* 常见说明（FAQ 摘要） */
+    .faq-summary {
+      background: #f7f9fb;
+      border-radius: 14px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .faq-summary h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item p {
+      color: #3d4d5f;
+      font-size: 0.95rem;
+    }
+
+    .faq-item:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 页脚 */
+    .footer {
+      border-top: 1px solid #eaedf0;
+      padding-top: 1.6rem;
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      color: #6c7a8a;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.6rem;
+    }
+
+    .footer a {
+      color: #2c3e50;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* 响应式 */
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.6rem 1.2rem 3.2rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.8rem;
+      }
+      .scene-card {
+        padding: 1.2rem 1.4rem;
+      }
+      .faq-summary {
+        padding: 1.4rem 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 顶部导航 -->
+    <nav class="nav">
+      <div class="nav-logo">✦ 华体会</div>
+      <ul class="nav-links">
+        <li><a href="#intro">介绍</a></li>
+        <li><a href="#scenes">场景</a></li>
+        <li><a href="#faq">说明</a></li>
+      </ul>
+    </nav>
+
+    <!-- hero -->
+    <div class="hero">
+      <h1>运动与日常<br>自然交织</h1>
+      <p>不只是参与，更是一种融入生活的节奏。从清晨的慢跑到傍晚的球场，华体会带来的是一份持续的陪伴。</p>
+    </div>
+
+    <!-- 核心介绍 -->
+    <section class="intro-section" id="intro">
+      <h2>关于华体会</h2>
+      <p>「华体会」这个词听起来像是一座桥梁，连接着户外与室内、独处与协作。它不强调竞技的激烈，而是更看重每个人都能找到适合自己的运动方式。</p>
+      <p>如果你正在寻找一个可以记录运动、发现活动、结识同好的地方，不妨了解一下 <a href="https://panel-hthsport.com">华体会</a>。它提供的不是千篇一律的教程，而是一个灵活的框架，让你按照自己的节奏来安排。</p>
+    </section>
+
+    <!-- 三个场景模块 -->
+    <div class="scenes" id="scenes">
+      <div class="scene-card">
+        <h3>🏃 晨间唤醒</h3>
+        <p>工作日早晨，用二十分钟的拉伸或快走开启一天。不需要复杂的装备，一双舒适的鞋，一条安静的林荫道，就足够了。</p>
+        <div class="meta">适合人群 · 上班族 / 早起派</div>
+      </div>
+      <div class="scene-card">
+        <h3>🏸 午后协作</h3>
+        <p>羽毛球、乒乓球或者简单的丢沙包——午休时间和同事在空地来一场不正式的比赛，笑声比比分更重要。</p>
+        <div class="meta">适合人群 · 办公室伙伴 / 学生团体</div>
+      </div>
+      <div class="scene-card">
+        <h3>🧘 晚间释放</h3>
+        <p>放下手机，铺开一张垫子。跟随身体的感觉做一些简单的瑜伽或冥想，让白天的疲惫慢慢流走。</p>
+        <div class="meta">适合人群 · 独处爱好者 / 减压族</div>
+      </div>
+    </div>
+
+    <!-- 常见说明（FAQ 摘要） -->
+    <div class="faq-summary" id="faq">
+      <h2>一些常见说明</h2>
+      <div class="faq-item">
+        <strong>需要专业基础吗？</strong>
+        <p>完全不需要。华体会的设计思路就是降低门槛，让运动回归本能。从零开始也完全可以。</p>
+      </div>
+      <div class="faq-item">
+        <strong>有固定的场地要求吗？</strong>
+        <p>大多数活动只要一块平坦的空地就能进行。公园、小区广场、甚至客厅，都可以成为你的运动角。</p>
+      </div>
+      <div class="faq-item">
+        <strong>如何开始第一次尝试？</strong>
+        <p>选择一个你感兴趣的场景，从最简单的动作开始。先坚持十分钟，比追求完美更重要。</p>
+      </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+      <span>© 华体会 · 轻量导航</span>
+      <span>内容仅供示意 · <a href="https://panel-hthsport.com">华体会</a></span>
+    </footer>
+  </div>
+</body>
+</html>
